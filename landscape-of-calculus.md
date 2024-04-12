@@ -19,7 +19,7 @@ Calculus is the study of *continuous change*.
 We usually indicate something that would change,
 or vary, using a varaible such as $x$ or $y$.
 
-Let us consider a real variable $y$ 
+Consider a real variable $y$ 
 whose initial value is $1$ and changes into $3$.
 The *amount of change* is defined to 
 be the difference[^distance] between the initial and final values:
@@ -48,7 +48,7 @@ $$
 
 ## Continuity 
 
-Let us discuss what does it mean when we say that a change is *continuous*.
+Now we discuss what does it mean when we say that a change is *continuous*.
 In particular, what dose it mean when we say that the change in $y$
 with repect to $x$ is continous?
 A change is continous if it happens gradually, 
