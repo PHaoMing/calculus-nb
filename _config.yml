@@ -1,0 +1,11 @@
+title: Calculus
+author: Hao-Ming Peng
+
+sphinx:
+  config:
+    html_theme_options:
+      use_sidenotes: true
+    html_css_file:
+      - "css/custom.css"
+  extra_extensions:
+    - sphinx_proof
