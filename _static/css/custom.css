@@ -1,0 +1,155 @@
+
+/* Etbb Font */
+@font-face {
+  font-family: etbb;
+  src:  url("../etbb/Etbb-Regular.otf");
+}
+
+@font-face {
+  font-family: etbb;
+  src:  url("../etbb/Etbb-Italic.otf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: etbb;
+  src:  url("../etbb/Etbb-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: etbb;
+  src:  url("../etbb/Etbb-BoldItalic.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root {
+  --bs-body-font-size: 1.4rem;
+  --bs-font-sans-serif: Gill Sans, system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",
+  "Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+html{
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  --pst-font-family-base: etbb, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; 
+
+  /* Heading*/
+  --pst-font-family-heading: var(--pst-font-family-base);
+  --pst-font-size-h1: 3.2rem;
+  --pst-font-size-h2: 2.2rem;
+
+  --pst-sidebar-secondary: 35%;
+  --pst-sidebar-fonti-size: 1.1rem;
+  
+  --pst-icon-admonition-default: "";
+}
+
+input#__primary:checked~.bd-container .bd-main .bd-content .bd-article-container {
+  padding-left: 12.5%;
+}
+
+.bd-main .bd-content .bd-article-container {
+  max-width: 100%;  /* default is 60em */
+}
+
+.bd-page-width{
+  max-width: 100%;
+}
+
+.bd-sidebar-primary {
+  transition: none;
+  width: 12.5%;
+}
+
+
+html[data-theme=light] {
+  --pst-color-background: #fffff8;
+  --pst-color-text-base: #111;
+  
+  --pst-font-size-base: 13px;
+}
+
+html[data-theme=dark]{
+  --pst-color-background: #151515;
+  --pst-color-text-base: #ddd;
+  
+  --pst-font-size-base: 15px;
+}
+
+body {
+  line-height: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  vertical-align: baseline;
+}
+
+
+
+.bd-article-container h1{
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.bd-article-container h2{
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 2.1rem;
+  margin-bottom: 1.4rem;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+sup {
+  font-size: 1rem;
+}
+
+.margin-toggle sup { /* The side note text mark */
+  left: 0.1rem;
+}
+
+
+.sidenote > sup:first-child:after { /* Add space after side note note mark */
+  content: ' ';
+}
+
+span.sidenote,
+span.marginnote {
+  margin-right: -60%;
+  width: 50%;
+   
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+}
+
+aside.margin {
+  margin-right: -60%;
+  width: 50%;
+}
+
+aside.margin p {
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+}
+
+.sd-tab-label {
+  font-family: var(--bs-font-sans-serif);
+}
+
+.admonition-title {
+  font-family: var(--bs-font-sans-serif);
+}
+
+
+
