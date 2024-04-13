@@ -65,6 +65,7 @@ input#__primary:checked~.bd-container .bd-main .bd-content .bd-article-container
 
 html[data-theme=light] {
   --pst-color-background: #fffff8;
+  --pst-color-on-background: #fffff8;
   --pst-color-text-base: #111;
   
   --pst-font-size-base: 13px;
@@ -72,6 +73,7 @@ html[data-theme=light] {
 
 html[data-theme=dark]{
   --pst-color-background: #151515;
+  --pst-color-on-background: #151515;
   --pst-color-text-base: #ddd;
   
   --pst-font-size-base: 13px;
@@ -151,5 +153,14 @@ aside.margin p {
   font-family: var(--bs-font-sans-serif);
 }
 
+div.admonition,
+.admonition {
+  overflow: visible;
+}
 
-
+.admonition span.sidenote,
+.admonition span.marginnote,
+.admonition aside.margin {
+  margin-right: calc(-64% - 0.8rem);
+  width: 50%;
+}

@@ -192,7 +192,7 @@ So your velocity at a specific moment can be computed as below:
 
 ```{math}
 :label: velocity
-v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta t} 
+v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta t}.
 ```
 
 [^diff-cont]: Continuity is the necessary condition for differentiability.
@@ -215,15 +215,21 @@ it is called the derivative of $f$ at $x = a$, written as  $f'(a)$.
 ````
 
 
+
+````{prf:example}
+We differente $p(t) = \sqrt{t}$ using {eq}`derivative_dfn`
+as our first example.[^differentiation]
+
+[^differentiation]: {-} The procedure to compute the derivative of a function
+is called *differentiation*.
+
 ```{margin}
+\
+\
+\
+\
 $a^2 - b^2 = (a+b)(a-b)$
 ```
-
-```{prf:example}
-The procedure to compute the derivative of a function
-is called *differentiation*.
-Let's differente $p(t) = \sqrt{t}$ using {eq}`derivative_dfn`
-as our first example.
 
 $$
 \begin{aligned}
@@ -240,5 +246,5 @@ v(t) = \frac{dp}{dt}
 $$
 
 Hence $v(t) = p'(t) = 1/(2 \sqrt{t})$.
-```
+````
 
