@@ -39,14 +39,15 @@ html{
   --pst-font-size-h1: 3.2rem;
   --pst-font-size-h2: 2.2rem;
 
-  --pst-sidebar-secondary: 35%;
+  --pst-sidebar-secondary: 40%;
   --pst-sidebar-fonti-size: 1.1rem;
   
   --pst-icon-admonition-default: "";
 }
 
+
 input#__primary:checked~.bd-container .bd-main .bd-content .bd-article-container {
-  padding-left: 12.5%;
+  padding-left: 8%;
 }
 
 .bd-main .bd-content .bd-article-container {
@@ -164,3 +165,4 @@ div.admonition,
   margin-right: calc(-64% - 0.8rem);
   width: 50%;
 }
+

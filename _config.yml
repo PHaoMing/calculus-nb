@@ -1,6 +1,19 @@
 title: Calculus
 author: Hao-Ming Peng
 
+parse:
+  myst_enable_extensions: 
+    # - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+    - attrs_block
+
 sphinx:
   config:
     html_theme_options:
