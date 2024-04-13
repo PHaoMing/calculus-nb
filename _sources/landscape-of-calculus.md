@@ -123,11 +123,12 @@ rigoroness for the notion of infinitesimals.[^infsmll-rebrand]
 So it was replaced by the notion of limits.
 You can think of an infinitesimal quantity as 
 a *limit appraoches $0$*.
-We can thus rewrite {eq}`infsmll_cont` as:
+
+Then {eq}`infsmll_cont` can be rewritten using the notion of limits:
 
 ```{math}
 :label: limit_cont_1
-\lim_{\Delta x \to 0} f(a + \Delta x) - f(a) = 0
+\lim_{\Delta x \to 0} f(a + \Delta x) - f(a) = 0.
 ```
 
 or
@@ -173,26 +174,28 @@ such that $p(t_0)$ is the position in kilometers
 a car moving along a straight line at time $t_0$ in hours.
 
 A common problem of a driver is the velocity $v$ we have to drive in order to 
-arrive at a position at $10$ km before $t = 4$, starting from $t = 1$.
+arrive $p = 10$ km before $t = 4$, starting from $t = 1$.
 We cannot drive at a constant velocity.
 So the problem actually asks about the average velocity:
 
 $$ 
-v = \frac{\Delta p}{\Delta t} = \frac{10 - p(1)}{4 - 1} = 3 \text{km/hr}
+v = \frac{\Delta p}{\Delta t} = \frac{10 - p(1)}{4 - 1} = 3 \text{km/hr}.
 $$
 
 
-A police cares more about whether you are speeding at any moment
+A police cares more about whether you are speeding at some moment
 on the road.
 The speed camera computes your speed instantly as you pass through it.
-That means the time interval $\Delta t$ is very small,
-and so $\Delta p$ is also very small.
+That means it computes your speed with a very small $\Delta t$,
+and so $\Delta p$ should also be very small.[^diff-cont]
 So your velocity at a specific moment can be computed as below:
 
 ```{math}
 :label: velocity
 v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta t} 
 ```
+
+[^diff-cont]: Continuity is the necessary condition for differentiability.
 
 It is obvious from the above equationa that calculus is involved, 
 since it contains the *rate of infinitesimal changes* $dp/dt$.

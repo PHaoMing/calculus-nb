@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=1c288023" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=db688a56" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -422,10 +422,10 @@ rigoroness for the notion of infinitesimals.<label for='marginnote-role-4' class
 didn’t succeed unitl the 1960s.</span>
 So it was replaced by the notion of limits.
 You can think of an infinitesimal quantity as
-a <em>limit appraoches <span class="math notranslate nohighlight">\(0\)</span></em>.
-We can thus rewrite <a class="reference internal" href="#equation-infsmll-cont">(1)</a> as:</p>
+a <em>limit appraoches <span class="math notranslate nohighlight">\(0\)</span></em>.</p>
+<p>Then <a class="reference internal" href="#equation-infsmll-cont">(1)</a> can be rewritten using the notion of limits:</p>
 <div class="math notranslate nohighlight" id="equation-limit-cont-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-limit-cont-1" title="Link to this equation">#</a></span>\[\lim_{\Delta x \to 0} f(a + \Delta x) - f(a) = 0\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-limit-cont-1" title="Link to this equation">#</a></span>\[\lim_{\Delta x \to 0} f(a + \Delta x) - f(a) = 0.\]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-limit-cont-2">
 <span class="eqno">(3)<a class="headerlink" href="#equation-limit-cont-2" title="Link to this equation">#</a></span>\[f(a) = \lim_{\Delta x \to 0} f(a + \Delta x)
@@ -457,18 +457,21 @@ that it enables to compute how much <span class="math notranslate nohighlight">\
 such that <span class="math notranslate nohighlight">\(p(t_0)\)</span> is the position in kilometers
 a car moving along a straight line at time <span class="math notranslate nohighlight">\(t_0\)</span> in hours.</p>
 <p>A common problem of a driver is the velocity <span class="math notranslate nohighlight">\(v\)</span> we have to drive in order to
-arrive at a position at <span class="math notranslate nohighlight">\(10\)</span> km before <span class="math notranslate nohighlight">\(t = 4\)</span>, starting from <span class="math notranslate nohighlight">\(t = 1\)</span>.
+arrive <span class="math notranslate nohighlight">\(p = 10\)</span> km before <span class="math notranslate nohighlight">\(t = 4\)</span>, starting from <span class="math notranslate nohighlight">\(t = 1\)</span>.
 We cannot drive at a constant velocity.
 So the problem actually asks about the average velocity:</p>
 <div class="math notranslate nohighlight">
 \[ 
-v = \frac{\Delta p}{\Delta t} = \frac{10 - p(1)}{4 - 1} = 3 \text{km/hr}
+v = \frac{\Delta p}{\Delta t} = \frac{10 - p(1)}{4 - 1} = 3 \text{km/hr}.
 \]</div>
-<p>A police cares more about whether you are speeding at any moment
+<p>A police cares more about whether you are speeding at some moment
 on the road.
 The speed camera computes your speed instantly as you pass through it.
-That means the time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> is very small,
-and so <span class="math notranslate nohighlight">\(\Delta p\)</span> is also very small.
+That means it computes your speed with a very small <span class="math notranslate nohighlight">\(\Delta t\)</span>,
+and so <span class="math notranslate nohighlight">\(\Delta p\)</span> should also be very small.<label for='sidenote-role-5' class='margin-toggle'><span id="id5">
+<sup>5</sup></span>
+
+</label><input type='checkbox' id='sidenote-role-5' name='sidenote-role-5' class='margin-toggle'><span class="sidenote"><sup>5</sup>Continuity is the necessary condition for differentiability.</span>
 So your velocity at a specific moment can be computed as below:</p>
 <div class="math notranslate nohighlight" id="equation-velocity">
 <span class="eqno">(4)<a class="headerlink" href="#equation-velocity" title="Link to this equation">#</a></span>\[v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta t} \]</div>
