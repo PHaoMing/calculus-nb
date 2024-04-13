@@ -16,22 +16,22 @@ kernelspec:
 # Landscape of Calculus
 
 Calculus is the study of *continuous change*.
-We usually indicate something that would change,
+We indicate something that will change,
 or vary, using a varaible such as $x$ or $y$.
 
 Consider a real variable $y$ 
-whose initial value is $1$ and changes into $3$.
-The *amount of change* is defined to 
+whose initial value is $1$ and later changes to $3$.
+The *amount of change* in $y$ is defined to 
 be the difference[^distance] between the initial and final values:
 
 $$
 \Delta y = 3 - 1 = 2.
 $$
 
-The difference in a variable $y$ is denoted by prepend
-$y$ with the symbol $\Delta$, the capital $D$ in greek.
+The difference in a variable $y$ is denoted by prepending
+$y$ with the symbol $\Delta$, the capital D in Greek.
 
-[^distance]: The measurement of difference depends on
+[^distance]: {-} The measurement of difference depends on
 the type of objects $y$ being of.
 For instance, the difference between two time series can
 be measured by the dynamic time warping algorithms.
@@ -39,8 +39,8 @@ be measured by the dynamic time warping algorithms.
 Measuring change is more of a defining routine as shown above.
 In science and in several applications of calculus,
 we concern about how one change affects another.
-The simplest model of the relation between two variables
-is through a function:
+The relation between two variables is usually modeled through
+a function:
 
 $$
 y = f(x).
@@ -48,7 +48,7 @@ $$
 
 ## Continuity 
 
-Now we discuss what does it mean when we say that a change is *continuous*.
+What does it mean when we say that a change is *continuous*?
 In particular, what dose it mean when we say that the change in $y$
 with repect to $x$ is continous?
 A change is continous if it happens gradually, 
@@ -59,7 +59,7 @@ no steep, interruption, abrupt, or some crazy stuff as illustrated below[^discon
 `````{tab-set}
 ````{tab-item} Steep
 ```{margin}
-The function $1/x^2$ goes very steep as $x$ approaches $0$.
+The function $1/x^2$ goes steep as $x$ approaches $0$.
 ```
 ```{image} images/inf-discont.pdf
 :width: 100%
@@ -87,8 +87,6 @@ has a sudden change when $x$ near $0$.
 ```
 ````
 
-
-
 ````{tab-item} Crazy
 ```{margin}
 The function $\sin(1/x)$ never settles down when $x$ goes to zero.
@@ -100,19 +98,26 @@ The function $\sin(1/x)$ never settles down when $x$ goes to zero.
 ````
 `````
 
-
 The function $y = f(x)$ is continuous at $x = a$
-if an infinitesimal change in $x$ around $x = a$
-results in infinitesiaml change in $y$.[^test-infsmll-cont]
-We denote the infinitesimal change in $x$ by 
-replacing $\Delta$ with the small $d$.
-So then the above statements can be written in the formula:
+if
 
-:::{math}
+{style=lower-roman}
+1. it is defined on $x=a$, and[^cont-inf-conds]
+2. an infinitesimal change in $x$ around $x=a$
+  results in infinitesimal change in $y$.
+
+[^cont-inf-conds]: {-} The first condition rules out the case of interruption,
+and the second rules out the cases of steep, abrupt, 
+and any unsteady behaviour near the point $x=a$.
+
+To denote infinitesimal change, subsitute the $\Delta$ with small "d".
+Then we can write the defining conditions for continuity at $x = a$ as:
+
+```{math}
 :label: infsmll_cont
 
 dy = f(a + dx) - f(a).
-:::
+```
 
 [^test-infsmll-cont]: {-} You should verify 
 this definition by examine the above examples
@@ -120,18 +125,25 @@ of discontinuities at the problem points.
 
 Early mathematicians lack the tools to provide 
 rigoroness for the notion of infinitesimals.[^infsmll-rebrand]
-So it was replaced by the notion of limits.
+So it is replaced by the notion of limits in modern calculus.
 You can think of an infinitesimal quantity as 
-a *limit appraoches $0$*.
+a *limit appraoching $0$*.
 
-Then {eq}`infsmll_cont` can be rewritten using the notion of limits:
+Rewrite {eq}`infsmll_cont` using the notion of limits:
+
+```{margin}
+You might read the eqaution as a limit "equals" zero.
+But notice that the notion of limits is always "approaching".
+So what the equation says is that the change in $y$
+is sufficiently close to zero that no one can distinguish it from zero.
+```
 
 ```{math}
 :label: limit_cont_1
 \lim_{\Delta x \to 0} f(a + \Delta x) - f(a) = 0.
 ```
 
-or
+Further simplify the equation above:
 
 ```{math}
 :label: limit_cont_2
@@ -165,30 +177,30 @@ within its domain.
 ## Derivatives as Rates of Changes
 
 The definition of continuity of $y = f(x)$ describes 
-a qualitative relation between the change in $y$ and the change in $x$.
+a qualitative relation between the change in $y$ and the change in $x$,
+the $\Delta y$ should be small if $\Delta x$ is small.
 The derivative of a function gives a quantative relation,
-that it enables to compute how much $\Delta y$ is when $\Delta x$ is known.  
+as it enables us to compute an exact quantity of $\Delta y$ when $\Delta x$ is known.  
 
 For illustration, we consider the function $p(t) = \sqrt{t}$ 
-such that $p(t_0)$ is the position in kilometers 
-a car moving along a straight line at time $t_0$ in hours.
+such that $p(t_0)$ is the position of
+a car moving along a straight line at time $t_0$.
 
-A common problem of a driver is the velocity $v$ we have to drive in order to 
-arrive $p = 10$ km before $t = 4$, starting from $t = 1$.
-We cannot drive at a constant velocity.
+A driver is concerned about the velocity $v$ we have to drive in order to 
+arrive $p = 10$ at $t = 4$, starting from some time, say, $t = 1$.
+It is impossible to drive at a constant velocity.
 So the problem actually asks about the average velocity:
 
 $$ 
-v = \frac{\Delta p}{\Delta t} = \frac{10 - p(1)}{4 - 1} = 3 \text{km/hr}.
+v = \frac{\Delta p}{\Delta t} = \frac{10 - p(1)}{4 - 1} = 3.
 $$
 
 
-A police cares more about whether you are speeding at some moment
-on the road.
-The speed camera computes your speed instantly as you pass through it.
-That means it computes your speed with a very small $\Delta t$,
-and so $\Delta p$ should also be very small.[^diff-cont]
-So your velocity at a specific moment can be computed as below:
+A police cares more about whether you are speeding at a moment.
+A speed camera computes your speed instantly as you pass through it.
+In other words, it computes your speed with a very small $\Delta t$,
+and so $\Delta p$ should also be very small[^diff-cont].
+So the velocity at a moment can be computed as a *rate of infinitesimal changes*:
 
 ```{math}
 :label: velocity
@@ -198,7 +210,7 @@ v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta
 [^diff-cont]: Continuity is the necessary condition for differentiability.
 
 It is obvious from the above equationa that calculus is involved, 
-since it contains the *rate of infinitesimal changes* $dp/dt$.
+since it contains infinitesimals $dp$ and $dt$.
 
 
 ````{prf:definition} Derivatives
@@ -210,15 +222,12 @@ is the function $f'(x)$ defined as:
 f'(x) = \frac{df}{dx} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}.
 ```
 
-While the derivative is evaluated at a speicifc point $x = a$,
+When the derivative is evaluated at a speicifc point $x = a$,
 it is called the derivative of $f$ at $x = a$, written as  $f'(a)$.
 ````
 
-
-
-````{prf:example}
-We differente $p(t) = \sqrt{t}$ using {eq}`derivative_dfn`
-as our first example.[^differentiation]
+````{prf:example} 
+Differente $p(t) = \sqrt{t}$ using {eq}`derivative_dfn`[^differentiation].
 
 [^differentiation]: {-} The procedure to compute the derivative of a function
 is called *differentiation*.
