@@ -200,7 +200,8 @@ A police cares more about whether you are speeding at a moment.
 A speed camera computes your speed instantly as you pass through it.
 In other words, it computes your speed with a very small $\Delta t$,
 and so $\Delta p$ should also be very small[^diff-cont].
-So the velocity at a moment can be computed as a *rate of infinitesimal changes*:
+So the velocity at a moment can be computed as a 
+*rate of infinitesimal change* or *instantaneous rate of change*:
 
 ```{math}
 :label: velocity
@@ -209,9 +210,9 @@ v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta
 
 [^diff-cont]: Continuity is the necessary condition for differentiability.
 
-It is obvious from the above equationa that calculus is involved, 
-since it contains infinitesimals $dp$ and $dt$.
-
+The derivative of a function $f(x)$ at a point $x = a$
+is the instaneous rate of change of $f$ with repect to $x$
+when $x = a$.
 
 ````{prf:definition} Derivatives
 The *derivative* of a function $f(x)$ 
