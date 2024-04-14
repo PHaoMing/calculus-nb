@@ -31,7 +31,7 @@
 }
 
 html{
-  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-variant-numeric: oldstyle-nums;
   --pst-font-family-base: etbb, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; 
 
   /* Heading*/
@@ -40,29 +40,10 @@ html{
   --pst-font-size-h2: 2.2rem;
 
   --pst-sidebar-secondary: 40%;
-  --pst-sidebar-fonti-size: 1.1rem;
+  --pst-sidebar-font-size: 1.4rem;
   
   --pst-icon-admonition-default: "";
 }
-
-
-input#__primary:checked~.bd-container .bd-main .bd-content .bd-article-container {
-  padding-left: 8%;
-}
-
-.bd-main .bd-content .bd-article-container {
-  max-width: 100%;  /* default is 60em */
-}
-
-.bd-page-width{
-  max-width: 100%;
-}
-
-.bd-sidebar-primary {
-  transition: none;
-  width: 12.5%;
-}
-
 
 html[data-theme=light] {
   --pst-color-background: #fffff8;
@@ -79,6 +60,26 @@ html[data-theme=dark]{
   
   --pst-font-size-base: 13px;
 }
+
+
+input#__primary:checked~.bd-container .bd-main .bd-content .bd-article-container {
+  /* When the primary sidebar folds */
+  padding-left: 8%;
+}
+
+.bd-main .bd-content .bd-article-container {
+  max-width: 100%; 
+}
+
+.bd-page-width{
+  max-width: 100%;
+}
+
+
+.bd-sidebar-primary {
+  transition: none;
+}
+
 
 body {
   line-height: 2rem;

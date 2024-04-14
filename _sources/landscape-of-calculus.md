@@ -54,7 +54,7 @@ with repect to $x$ is continous?
 A change is continous if it happens gradually, 
 no steep, interruption, abrupt, or some crazy stuff as illustrated below[^discont-exmp-epilog].
 
-[^discont-exmp-epilog]: The problem location is colored grey.
+[^discont-exmp-epilog]:  The problem location is colored grey.
 
 `````{tab-set}
 ````{tab-item} Steep
@@ -213,6 +213,7 @@ v(t) = \frac{dp}{dt} = \lim_{\Delta t \to 0}\frac{p(t + \Delta t) - p(t)}{\Delta
 The derivative of a function $f(x)$ at a point $x = a$
 is the instaneous rate of change of $f$ with repect to $x$
 when $x = a$.
+So the above equation is read as $v(t)$ is the derivative of $p(t)$ with repect to $t$. 
 
 ````{prf:definition} Derivatives
 The *derivative* of a function $f(x)$ 
